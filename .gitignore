@@ -1,5 +1,16 @@
 # Ignore Gradle project-specific cache directory
 .gradle
+.bloop
+/build/
+*/build/
+build/
+.idea
+out/
+*.ipr
+*.iml
+*.iws
+.env
+.DS_Store
+*.hprof
+.metals/
 
-# Ignore Gradle build output directory
-build
