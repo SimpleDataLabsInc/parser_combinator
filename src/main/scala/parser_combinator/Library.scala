@@ -30,7 +30,7 @@ def foo(a: Int, b: Int, c: Int) : Int = {
 """
     val sample2 =
       """
-def foo(a: Int, b: Int, c: Int) : Int = {
+def bar(a: Int, b: Int, c: Int) : Int = {
   let d = a > b and c > a + b;
   return d;
 }

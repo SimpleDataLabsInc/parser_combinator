@@ -18,9 +18,15 @@ object Compiler {
     val x = for {
       tokens ← lexer(code).right
       ast    ← parser(tokens).right
-    } yield ast
+    } yield (tokens, ast)
 
-    if (debug) screen(x)
-    x
+    if (debug && x.isRight) {
+      val tokens = x.right.get._1
+      val ast = x.right.get._2
+      screen(tokens)
+      screen(ast)
+    }
+
+    x.map{ case (tokens, ast) ⇒ ast }
   }
 }
